@@ -1,0 +1,22 @@
+@font-face {
+	font-family: 'Source Han Sans CN-Bold';
+	src: url('@renderer/assets/font/SourceHanSansCN-Bold.otf') format('opentype');
+}
+
+@font-face {
+	font-family: 'Source Han Sans CN-Normal';
+	src: url('@renderer/assets/font/SourceHanSansCN-Normal.otf')
+		format('opentype');
+}
+
+@font-face {
+	font-family: 'Source Han Sans CN-Medium';
+	src: url('@renderer/assets/font/SourceHanSansCN-Medium.otf')
+		format('opentype');
+}
+
+@font-face {
+	font-family: 'Source Han Sans CN-Regular';
+	src: url('@renderer/assets/font/SourceHanSansCN-Regular.otf')
+		format('opentype');
+}

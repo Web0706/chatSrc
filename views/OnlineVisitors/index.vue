@@ -360,8 +360,6 @@ const searchCustomService = async () => {
 }
 
 const selectCustomService = (kefuItem: any) => {
-  console.log(kefuItem)
-
   visitorBelongStatus.value = false
   params.value.secret = kefuItem.secret
 
@@ -575,7 +573,7 @@ onActivated(() => {
                 alt=""
                 class="img"
               />
-              {{ row.name }}
+              {{ row.visitor_name === '' ? row.name : row.visitor_name }}
             </div>
           </template>
         </el-table-column>

@@ -167,8 +167,6 @@ const toRefresh = () => {
   const id = visitorList.value[0].visitor_id
   toId.value = id
 
-  console.log(visitorList.value[0])
-
   getChatRecords(id, true)
 
   visitorName.value =
@@ -492,7 +490,7 @@ const lookImg = (url: string) => {
   })
 }
 
-// 下载文件  todo
+// 下载文件
 const downloadFile = (item: any) => {
   const url = item.content.replace('file[', '').replace(']', '')
 
@@ -697,7 +695,8 @@ onActivated(() => {
   setTimeout(async () => {
     if (!route.query.id) {
       await takeVisitorList(false)
-      toRefresh()
+
+      if (flag.value > 2) toRefresh()
 
       setTimeout(() => {
         chatIndex.value = visitorList.value.findIndex(

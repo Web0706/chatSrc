@@ -285,13 +285,14 @@ const handleEditQuickReply = async item => {
       <div class="automatic-reply" v-if="activeNavIndex === 1">
         <div class="item">
           <p>#当客服忙碌时</p>
+
           <el-input
             type="textarea"
             placeholder="输入内容"
             style="width: 380px"
             :rows="5"
             maxlength="30"
-            v-model="autoReplyJson.auto_reply_list[2].reply_desc"
+            v-model="autoReplyJson.auto_reply_list[1].reply_desc"
             @input="disabledFlag = false"
           ></el-input>
         </div>
@@ -303,7 +304,7 @@ const handleEditQuickReply = async item => {
             style="width: 380px"
             :rows="5"
             maxlength="30"
-            v-model="autoReplyJson.auto_reply_list[1].reply_desc"
+            v-model="autoReplyJson.auto_reply_list[2].reply_desc"
             @input="disabledFlag = false"
           ></el-input>
         </div>

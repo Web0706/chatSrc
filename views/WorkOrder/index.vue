@@ -23,6 +23,8 @@ import {
   editOrder,
   orderCount,
 } from '@renderer/api/order'
+import { useRoute } from 'vue-router'
+const route = useRoute()
 
 const userStore = storeToRefs(useUserStore())
 
@@ -181,8 +183,6 @@ const handledialogSearch = ({ value }) => {
 }
 
 const resetPage = (index: number) => {
-  console.log(index)
-
   queryCondition.value = ''
   query.value.priority = null
 
@@ -369,6 +369,15 @@ watch(addDialogVisible, () => {
     getOrderCount()
   }
 })
+
+watch(
+  () => route.query,
+  () => {
+    if (route.query.id) {
+      handleActiveIndex(Number(route.query.id))
+    }
+  }
+)
 
 onActivated(() => {
   getOrderList()
